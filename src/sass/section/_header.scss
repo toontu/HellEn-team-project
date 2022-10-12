@@ -1,0 +1,358 @@
+button {
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+
+.link__up {
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  bottom:15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1 solid $accentColor;
+  box-shadow: 5px 5px 10px rgba(78, 39, 6, 0.5);
+  transform: scale(1);
+
+  z-index: 5;
+  color: $accentColor;
+
+  transition: transform 250ms ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+}
+
+.isnt-show{
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $mobile) {
+  .container {
+    width: $mobile;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    width: $tablet;
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    width: $desktop;
+    padding: 0 16px;
+  }
+}
+
+.header {
+  // width: 100%;
+  padding-top: 20px;
+  background-color: $bgColor;
+  background-color: $bgColor;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 0px;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1680px;
+  }
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1.23;
+  letter-spacing: 0.04em;
+  color: $mainColor;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+  }
+}
+
+.logo-top-part {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.menu-logo-icon {
+  @media screen and (min-width: $tablet) {
+    width: 22px;
+    height: 30px;
+  }
+}
+
+.logo-en {
+  text-transform: uppercase;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 5px;
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 8px;
+    line-height: 1.25;
+  }
+}
+
+.accent {
+  color: $accentColor;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @media screen and (max-width: 1679px) {
+    display: none;
+  }
+}
+
+.site-nav__list {
+  display: flex;
+}
+
+.site-nav__item {
+  & + & {
+    margin-left: 40px;
+  }
+}
+
+.site-nav-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  text-transform: uppercase;
+  color: $lightColor;
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+  &.current {
+    color: $accentColor;
+  }
+}
+
+.header-buttons {
+  display: flex;
+  margin-left: auto;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 40px;
+  }
+}
+
+.header-consult-button {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    width: 260px;
+    height: 48px;
+    text-align: center;
+    color: $accentColor;
+    border: 2px solid $accentColor;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 336px;
+    height: 70px;
+  }
+
+  transition: color 250ms ease, background-color 250ms ease, border-color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: $bgColor;
+    background-color: $accentColor;
+    outline: none;
+    border: 2px solid transparent;
+  }
+}
+
+.menu-open-btn {
+  display: block;
+  margin-left: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (min-width: $desktop) {
+  .menu-open-btn {
+    display: none;
+  }
+}
+
+.menu-open-icon {
+  transition: fill 250ms ease;
+
+  .menu-open-btn:hover &,
+  .menu-open-btn:focus & {
+    fill: $accentColor;
+  }
+}
+
+.mobile-menu {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 21, 24, 0.9);
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 0px 0px 5px;
+  opacity: 1;
+  transform: scale(1);
+  transform: translate(0, 0);
+  transition: transform 250ms ease, opacity 250ms ease,
+    visibility 250ms ease;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.1);
+    // transform: translate(900%, 50%);
+  }
+}
+
+.logo-mob-overlay {
+  color: $bgColor;
+}
+
+.logo-wrap {
+  margin-bottom: 40px;
+}
+
+.mobile-nav {
+  display: flex;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.mobile-menu-link {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: $bgColor;
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+  &.current {
+    color: $accentColor;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+  }
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.menu-close-btn {
+  position: absolute;
+  display: block;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-close-icon {
+  fill: $bgColor;
+  align-self: center;
+  transition: fill 250ms ease;
+
+  .menu-close-btn:hover &,
+  .menu-close-btn:focus & {
+    fill: $accentColor;
+  }
+}
+
+.mobile-menu-button {
+  display: block;
+  width: 280px;
+  height: 48px;
+  text-align: center;
+  color: $accentColor;
+  border: 2px solid $accentColor;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition: color 250ms ease, background-color 250ms ease, border-color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: $bgColor;
+    background-color: $accentColor;
+    border: 2px solid transparent;
+    outline: none;
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}

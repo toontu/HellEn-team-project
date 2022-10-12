@@ -1,0 +1,81 @@
+.benefits {
+    padding-bottom: 0;
+    background-image: linear-gradient($mainColor 63%, $bgColor 63%);
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 0;
+        background-image: linear-gradient($mainColor 41%, $bgColor 41%);                  
+    }
+
+    @media screen and (min-width: $tablet) {
+        background-image: linear-gradient($mainColor 52%, $bgColor 52%);                  
+    }
+}
+
+.benefits__thumb {
+    @media screen and (min-width: $desktop) {
+        position: relative;
+        height: 362px;                 
+    }
+
+}
+
+.benefits__grid {
+    margin: 0;
+    padding: 20px 24px;
+    row-gap: 40px;
+    background-color: $bgColor;
+    list-style: none;
+    counter-reset: li;
+    z-index: 10;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+    @media screen and (min-width: $tablet) {
+        padding: 40px 92px;
+        display: flex;   
+        flex-wrap: wrap;     
+        column-gap: 32px;  
+        row-gap: 44px;    
+    }
+
+    @media screen and (min-width: $desktop) {
+        position: absolute;
+        margin: 0;
+        padding: 60px 32px 60px 140px;  
+        column-gap: 204px;             
+    }
+}
+
+.benefits__item {
+    &::before {
+        content: "— 0" (counter(li));
+        counter-increment: li;
+        font-weight: 700;
+        font-size: 14px;
+        color: $accentColor;
+
+        @media screen and (min-width: $desktop) {      
+            font-size: 20px;     
+        }
+    }
+
+    @media screen and (min-width: $tablet) {  
+        width: 236px;     
+    }
+
+    @media screen and (min-width: $desktop) {      
+        width: 356px;
+    }
+}
+
+.benefits__text {
+    padding-top: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+
+    @media screen and (min-width: $desktop) {      
+        font-size: 20px;  
+        line-height: 1.20;   
+    }
+}

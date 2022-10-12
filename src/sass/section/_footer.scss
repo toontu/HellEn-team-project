@@ -1,0 +1,147 @@
+.footer {
+  background-color: $bgColor;
+  background-color: $bgColor;
+
+  @media screen and (min-width: $tablet) {
+    // padding-top: 40px;
+    // padding-bottom: 40px;
+  }
+  @media screen and (min-width: $desktop) {
+    // padding-bottom: 0px;
+  }
+}
+
+// .container {
+//   width: 100%;
+//   padding: 0 20px;
+//   margin: 0 auto;
+// }
+
+.footer-nav {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.footer-logo-container {
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    //   align-items: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footer-phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-phone-icon {
+  width: 20px;
+  height: 19px;
+  // background-image: url(../images/phone.svg);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  margin-right: 8px;
+  fill: $accentColor;
+
+  @media screen and (min-width: 768px) {
+    width: 24px;
+    height: 23px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 30px;
+    height: 29px;
+    margin-right: 16px;
+  }
+}
+
+.footer-tel {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.08em;
+  color: $mainColor;
+
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
+
+.footer-instagram-link {
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/instagram.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer-instagram {
+  @media screen and (min-width: 768px) {
+    border-left: 1px solid $lightColor;
+    padding-left: 24px;
+    margin-left: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 16px;
+  }
+}
+
+.footer-bottom {
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.footer-bottom-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  color: $lightColor;
+}
